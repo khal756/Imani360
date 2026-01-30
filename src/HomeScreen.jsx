@@ -6,13 +6,14 @@ const HomeScreen = () => {
 
   return (
     <div 
-      className="min-h-screen flex flex-col items-center justify-start pt-12 pb-20 px-4"
-      style={{
-        background: 'radial-gradient(ellipse at top, rgba(99, 102, 241, 0.8) 0%, rgba(37, 40, 153, 0.9) 50%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        margin: 0,
-        fontFamily: "'Montserrat', sans-serif", // Modern, professional font
-      }}
-    >
+  className="min-h-screen flex flex-col items-center justify-start pt-14 pb-24 px-6"
+  style={{
+    background: 'radial-gradient(ellipse at top, rgba(99, 102, 241, 0.8) 0%, rgba(37, 40, 153, 0.9) 50%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    margin: 0,
+    fontFamily: "'Montserrat', sans-serif", // Modern, professional font
+  }}
+>
+
       {/* Header Container */}
       <div className="w-full max-w-2xl mb-8">
         <div
@@ -133,6 +134,7 @@ const HomeScreen = () => {
               boxShadow: '0 12px 24px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.1), 0 0 20px rgba(220, 38, 38, 0.5)',
               borderRadius: '50%',
               marginLeft: '60px',
+              outline: '1px solid transparent',
             }}
           >
             <span className="text-white text-3xl md:text-4xl mb-2 drop-shadow-lg">🔈</span>
