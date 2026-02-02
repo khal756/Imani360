@@ -8,10 +8,9 @@ const AdminLogin = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Basic validation (replace with real auth logic later)
-    if (username === 'admin' && password === 'password') { // Example credentials
-      alert('Login successful!'); // Replace with actual navigation or state update
-      // navigate('/admin-dashboard'); // Uncomment to go to a dashboard after login
+  
+    if (username === 'admin' && password === 'password') { 
+      alert('Login successful!'); 
     } else {
       alert('Invalid credentials');
     }
@@ -38,7 +37,7 @@ const AdminLogin = () => {
             textAlign: 'center',
           }}
         >
-          <h1 className="text-white font-black text-2xl drop-shadow-md">ADMIN LOGIN</h1>
+          <h1 className="text-white font-extrabold text-3xl tracking-wider drop-shadow-lg uppercase">ADMIN LOGIN</h1>
         </div>
       </div>
 
@@ -68,7 +67,7 @@ const AdminLogin = () => {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md"
             required
           />
         </div>
@@ -78,7 +77,7 @@ const AdminLogin = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-md"
             required
           />
         </div>
@@ -93,7 +92,7 @@ const AdminLogin = () => {
       {/* Back Button */}
       <button
         onClick={() => navigate('/more')}
-        className="mt-6 text-white underline hover:text-gray-300"
+        className="mt-6 text-white underline hover:text-gray-300 hover:scale-105 transition-transform duration-300"
       >
         Back to More
       </button>
