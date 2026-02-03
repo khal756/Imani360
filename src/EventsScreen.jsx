@@ -5,22 +5,21 @@ import 'react-calendar/dist/Calendar.css';
 
 const EventsScreen = () => {
   const navigate = useNavigate();
-  const [selectedDate, setSelectedDate] = useState(null); // null means no date selected
-  const [viewedMonth, setViewedMonth] = useState(new Date()); // Track the calendar's viewed month
-
-  // Dummy event data (expand with real data/API; assume posters are URLs from admin uploads)
+  const [selectedDate, setSelectedDate] = useState(null); 
+  const [viewedMonth, setViewedMonth] = useState(new Date()); 
+  
   const events = [
     { id: 1, title: 'Sunday Worship Service', date: '2023-10-15', time: '10:00 AM', location: 'Main Sanctuary', description: 'Join us for praise and worship.', category: 'Worship', icon: '🙏', poster: 'https://example.com/worship-poster.jpg' },
     { id: 2, title: 'Community Outreach', date: '2023-10-20', time: '2:00 PM', location: 'Downtown Park', description: 'Serving the community with love.', category: 'Outreach', icon: '🤝', poster: null },
     { id: 3, title: 'Bible Study Group', date: '2023-10-25', time: '7:00 PM', location: 'Fellowship Hall', description: 'Dive deep into scripture.', category: 'Study', icon: '📖', poster: 'https://example.com/bible-study-poster.jpg' },
-    // Add more events
+   
   ];
 
-  // Get today's date for highlighting
+
   const today = new Date();
   const todayString = today.toISOString().split('T')[0];
 
-  // Filter events for the viewed month (upcoming only, from today onward)
+  
   const viewedMonthEvents = events.filter(event => {
     const eventDate = new Date(event.date);
     return eventDate >= today && 
@@ -99,7 +98,7 @@ const EventsScreen = () => {
         </div>
       </div>
 
-      {/* Navigation Buttons - Standardized */}
+      {/* Navigation Buttons */}
       <div className="w-full max-w-2xl flex justify-between items-center mb-4">
         <button
           onClick={() => navigate(-1)}
